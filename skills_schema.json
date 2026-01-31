@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/pi0/skillman/blob/main/skills_schema.json",
+  "title": "Skills Config",
+  "description": "Configuration file for skillman - manages project skills",
+  "type": "object",
+  "required": ["skills"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "skills": {
+      "type": "array",
+      "description": "List of skill sources to install",
+      "items": {
+        "type": "object",
+        "required": ["source", "skills"],
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Skill source identifier (e.g., 'vercel-labs/skills')"
+          },
+          "skills": {
+            "type": "array",
+            "description": "Specific skills to install from this source (empty array = all)",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

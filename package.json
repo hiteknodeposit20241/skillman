@@ -1,0 +1,43 @@
+{
+  "name": "skillman",
+  "version": "0.0.0",
+  "description": "CLI to manage project skills and lock them in skills.json",
+  "license": "MIT",
+  "repository": "pi0/skillman",
+  "bin": {
+    "skillman": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills_schema.json"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "obuild",
+    "dev": "vitest dev",
+    "skillman": "node ./src/cli.ts",
+    "format": "automd && oxlint . --fix && oxfmt .",
+    "lint": "oxlint . && oxfmt --check .",
+    "prepack": "pnpm build",
+    "release": "pnpm test && pnpm build && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm typecheck && vitest run --coverage",
+    "typecheck": "tsgo --noEmit --skipLibCheck"
+  },
+  "dependencies": {
+    "skills": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@typescript/native-preview": "latest",
+    "@vitest/coverage-v8": "latest",
+    "automd": "latest",
+    "changelogen": "latest",
+    "obuild": "latest",
+    "oxfmt": "latest",
+    "oxlint": "latest",
+    "typescript": "^5.9.3",
+    "vitest": "latest"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
