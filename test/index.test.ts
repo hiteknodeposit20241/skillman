@@ -2,6 +2,7 @@ import { mkdir, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { findSkillsConfig, readSkillsConfig } from "../src/config.ts";
+import { findSkillsBinary } from "../src/skills.ts";
 
 describe("findSkillsConfig", () => {
   const testDir = join(import.meta.dirname, ".tmp");
@@ -56,5 +57,13 @@ describe("readSkillsConfig", () => {
 
   it("throws when skills.json not found", async () => {
     await expect(readSkillsConfig({ cwd: "/" })).rejects.toThrow("skills.json not found");
+  });
+});
+
+describe("findSkillsBinary", () => {
+  it("finds skills binary in node_modules", () => {
+    const binary = findSkillsBinary({ cache: false });
+    expect(binary).toBeDefined();
+    expect(binary).toMatch(/node_modules[/\\]\.bin[/\\]skills$/);
   });
 });

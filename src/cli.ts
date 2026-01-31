@@ -4,7 +4,7 @@ import { parseArgs } from "node:util";
 
 import { c } from "./utils/colors.ts";
 import { addSkill, findSkillsConfig } from "./config.ts";
-import { installSkills } from "./skills.ts";
+import { installSkillSource, installSkills } from "./skills.ts";
 
 const name = "skillman";
 const version = "0.0.0";
@@ -60,18 +60,17 @@ ${c.dim}$${c.reset} npx ${name} add ${c.cyan}vercel-labs/skills${c.reset}
       showUsage("add");
       throw new Error("Missing skill source.");
     }
+    const agents = values.agent || ["claude-code"];
     for (const rawSource of sources) {
       const { source, skills: parsedSkills } = parseSource(rawSource);
       const skills = [...parsedSkills, ...(values.skill ?? [])];
+
+      // Install the skill first
+      await installSkillSource({ source, skills }, { agents, yes: true });
+
+      // Then add to skills.json
       await addSkill(source, skills);
-      const normalizedSkills = skills
-        .map((skill) => skill.trim())
-        .filter((skill) => skill.length > 0 && skill !== "*");
-      const skillsSuffix =
-        normalizedSkills.length > 0 ? ` ${c.dim}(${normalizedSkills.join(", ")})${c.reset}` : "";
-      console.log(
-        `${c.green}✔${c.reset} Added ${c.cyan}${source}${c.reset} to skills.json${skillsSuffix}`,
-      );
+      console.log(`${c.green}✔${c.reset} Added ${c.cyan}${source}${c.reset} to skills.json`);
     }
     return;
   }
@@ -89,6 +88,7 @@ ${c.bold}Arguments:${c.reset}
 
 ${c.bold}Options:${c.reset}
   ${c.cyan}--skill${c.reset} <name>    Specific skill to add ${c.dim}(can be repeated)${c.reset}
+  ${c.cyan}--agent${c.reset} <name>    Target agent ${c.dim}(default: claude-code, can be repeated)${c.reset}
   ${c.cyan}-h, --help${c.reset}        Show this help message
 
 ${c.bold}Examples:${c.reset}

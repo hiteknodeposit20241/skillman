@@ -1,6 +1,7 @@
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 import { c } from "./utils/colors.ts";
 import { readSkillsConfig } from "./config.ts";
@@ -13,13 +14,20 @@ export interface InstallSkillsOptions {
   yes?: boolean;
 }
 
-export async function findSkillsBinary(cwd: string = process.cwd()): Promise<string | undefined> {
-  let dir = resolve(cwd);
-  const root = dirname(dir);
+let _skillsBinaryCache: string | undefined | null = null;
 
-  while (dir !== root) {
+export function findSkillsBinary(options?: { cache?: boolean }): string | undefined {
+  const useCache = options?.cache !== false;
+  if (useCache && _skillsBinaryCache !== null) {
+    return _skillsBinaryCache;
+  }
+
+  let dir = dirname(fileURLToPath(import.meta.url));
+
+  while (true) {
     const candidate = join(dir, "node_modules", ".bin", "skills");
     if (existsSync(candidate)) {
+      _skillsBinaryCache = candidate;
       return candidate;
     }
     const parent = dirname(dir);
@@ -27,13 +35,13 @@ export async function findSkillsBinary(cwd: string = process.cwd()): Promise<str
     dir = parent;
   }
 
+  _skillsBinaryCache = undefined;
   return undefined;
 }
 
 export async function installSkills(options: InstallSkillsOptions = {}): Promise<void> {
   const { config, path: configPath } = await readSkillsConfig({ cwd: options.cwd });
   const configDir = dirname(configPath);
-  const skillsBinary = await findSkillsBinary(options.cwd);
 
   // Ensure .agents is in .gitignore
   await addGitignoreEntry(".agents", { cwd: configDir });
@@ -45,47 +53,62 @@ export async function installSkills(options: InstallSkillsOptions = {}): Promise
   let i = 0;
   for (const entry of config.skills) {
     i++;
-    const skillList =
-      (entry.skills?.length || 0) > 0 ? ` ${c.dim}(${entry.skills!.join(", ")})${c.reset}` : "";
-    console.log(`${c.cyan}◐${c.reset} [${i}/${total}] Installing ${entry.source}${skillList}`);
-
-    const [command, args] = skillsBinary
-      ? [skillsBinary, ["add", entry.source]]
-      : ["npx", ["skills", "add", entry.source]];
-
-    if ((entry.skills?.length || 0) > 0) {
-      args.push("--skill", ...entry.skills!);
-    } else {
-      args.push("--skill", "*");
-    }
-
-    if (options.agents && options.agents.length > 0) {
-      args.push("--agent", ...options.agents);
-    }
-
-    if (options.global) {
-      args.push("--global");
-    }
-
-    if (options.yes) {
-      args.push("--yes");
-    }
-
-    if (process.env.DEBUG) {
-      console.log(`${c.dim}$ ${["skills", ...args].join(" ")}${c.reset}\n`);
-    }
-
-    const skillStart = performance.now();
-    await runCommand(command, args);
-    const skillDuration = formatDuration(performance.now() - skillStart);
-    console.log(
-      `${c.green}✔${c.reset} Installed ${entry.source} ${c.dim}(${skillDuration})${c.reset}\n`,
-    );
+    await installSkillSource(entry, { ...options, prefix: `[${i}/${total}] ` });
   }
 
   const totalDuration = formatDuration(performance.now() - totalStart);
   console.log(
     `🎉 Done! ${total} skill${total === 1 ? "" : "s"} installed in ${c.green}${totalDuration}${c.reset}.`,
+  );
+}
+
+export interface InstallSkillSourceOptions extends InstallSkillsOptions {
+  prefix?: string;
+}
+
+export async function installSkillSource(
+  entry: { source: string; skills?: string[] },
+  options: InstallSkillSourceOptions,
+): Promise<void> {
+  const skillsBinary = findSkillsBinary();
+
+  const skillList =
+    (entry.skills?.length || 0) > 0 ? ` ${c.dim}(${entry.skills!.join(", ")})${c.reset}` : "";
+  console.log(`${c.cyan}◐${c.reset} ${options.prefix || ""}Installing ${entry.source}${skillList}`);
+
+  const [command, args] = skillsBinary
+    ? [skillsBinary, ["add", entry.source]]
+    : ["npx", ["skills", "add", entry.source]];
+
+  if ((entry.skills?.length || 0) > 0) {
+    args.push("--skill", ...entry.skills!);
+  } else {
+    args.push("--skill", "*");
+  }
+
+  if (options.agents && options.agents.length > 0) {
+    args.push("--agent", ...options.agents);
+  }
+
+  if (options.global) {
+    args.push("--global");
+  }
+
+  if (options.yes) {
+    args.push("--yes");
+  }
+
+  if (process.env.DEBUG) {
+    console.log(
+      `${c.dim}$ ${[command.replace(process.cwd(), "."), ...args].join(" ")}${c.reset}\n`,
+    );
+  }
+
+  const skillStart = performance.now();
+  await runCommand(command, args);
+  const skillDuration = formatDuration(performance.now() - skillStart);
+  console.log(
+    `${c.green}✔${c.reset} Installed ${entry.source} ${c.dim}(${skillDuration})${c.reset}\n`,
   );
 }
 
