@@ -1,77 +1,66 @@
 <svg height="269.6" width="688" xmlns="http://www.w3.org/2000/svg">
-	<g transform="translate(32,16)">
-		<filter filterUnits="userSpaceOnUse" height="277.6" id="shadow" width="696" x="-32" y="-24">
-			<feGaussianBlur stdDeviation="12" />
-		</filter>
-		<rect fill="#000000c0" filter="url(#shadow)" height="205.6" rx="10" ry="10" width="624" x="4"
-			y="12" />
-		<rect fill="#282c34" height="205.6" rx="10" ry="10" width="624" />
-		<clipPath id="header">
-			<rect height="28" width="624" />
-		</clipPath>
-		<rect clip-path="url(#header)" fill="#383837" height="56" rx="10" ry="10" width="624" />
-		<line stroke="#000000c0" stroke-width="0.5" x1="0" x2="624" y1="28" y2="28" />
-		<text dominant-baseline="central" fill="#b3b3b3"
-			font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
-			font-size="14" font-weight="bold" text-anchor="middle" x="312" y="14">npx skillman</text>
-		<g>
-			<circle cx="14" cy="14" fill="#ff5f56" r="6" stroke="#ff5f56" stroke-width="0.5" />
-			<circle cx="34" cy="14" fill="#ffbd2e" r="6" stroke="#ffbd2e" stroke-width="0.5" />
-			<circle cx="54" cy="14" fill="#28c941" r="6" stroke="#28c941" stroke-width="0.5" />
-		</g>
-		<svg class="terminal"
-			font-family="JetBrains Mono, Fira Code, Source Code Pro, Cascadia Code, Consolas, Menlo, Monaco, DejaVu Sans Mono, monospace, Symbols Nerd Font Mono"
-			font-size="12" height="177.6" width="624" y="28">
-			<svg fill="#dcdfe4" x="24" y="24">
-				<g>
-					<svg height="129.6" viewBox="0 0 48 10.8" width="576">
-						<g stroke-width="0.025" />
-					</svg>
-					<svg height="14.4" overflow="hidden" width="576" y="0">
-						<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">🤹</tspan><tspan fill="#dcdfe4" x="1.8em">Installing </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills... </tspan></text>
-					</svg>
-					<svg height="14.4" overflow="hidden" width="576" y="28.8">
-						<text xml:space="preserve" y="0.96em"></text>
-						<text textLength="0.6em" x="0em" xml:space="preserve" y="0.96em"><tspan fill="#56b6c2">◐</tspan></text>
-						<text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">[1/2] </tspan><tspan fill="#dcdfe4">Installing </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(find-skills)</tspan></text>
-					</svg>
-					<svg height="14.4" overflow="hidden" width="576" y="43.2">
-						<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(1s)</tspan></text>
-					</svg>
-					<svg height="14.4" overflow="hidden" width="576" y="72">
-						<text xml:space="preserve" y="0.96em"></text>
-						<text textLength="0.6em" x="0em" xml:space="preserve" y="0.96em"><tspan fill="#56b6c2">◐</tspan></text>
-						<text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">[2/2] </tspan><tspan fill="#dcdfe4">Installing </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(skill-creator)</tspan></text>
-					</svg>
-					<svg height="14.4" overflow="hidden" width="576" y="86.4">
-						<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(1s)</tspan></text>
-					</svg>
-					<svg height="14.4" overflow="hidden" width="576" y="115.2">
-						<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">🎉</tspan><tspan fill="#dcdfe4" x="1.8em">Done! </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills </tspan><tspan fill="#dcdfe4">installed </tspan><tspan fill="#dcdfe4">in </tspan><tspan fill="#98c379">3s</tspan><tspan fill="#dcdfe4">. </tspan></text>
-					</svg>
-				</g>
-			</svg>
-		</svg>
-		<rect fill="none" height="205.6" rx="10" ry="10" stroke="#000000" stroke-width="0.5" width="624" />
-		<rect fill="none" height="203.6" rx="9" ry="9" stroke="#f0f0f080" stroke-width="0.5" width="622"
-			x="1" y="1" />
-	</g>
-	<style>
-		@font-face {
-		font-family: Fira Code;
-		font-weight: 300 700;
-		font-style: normal;
-		src:
-		url(https://raw.githubusercontent.com/pamburus/fonts/refs/heads/main/FiraCode/FiraCode-VF.woff2)
-		format('woff2');
-		}
-		@font-face {
-		font-family: JetBrains Mono;
-		font-weight: 100 800;
-		font-style: normal;
-		src:
-		url(https://raw.githubusercontent.com/pamburus/fonts/refs/heads/main/JetBrainsMono/fonts/variable/JetBrainsMono%5Bwght%5D.woff2)
-		format('woff2');
-		}
+<g transform="translate(32,16)">
+<filter filterUnits="userSpaceOnUse" height="277.6" id="shadow" width="696" x="-32" y="-24">
+<feGaussianBlur stdDeviation="12"/>
+</filter>
+<rect fill="#000000c0" filter="url(#shadow)" height="205.6" rx="10" ry="10" width="624" x="4" y="12"/>
+<rect fill="#282c34" height="205.6" rx="10" ry="10" width="624"/>
+<clipPath id="header">
+<rect height="28" width="624"/>
+</clipPath>
+<rect clip-path="url(#header)" fill="#383837" height="56" rx="10" ry="10" width="624"/>
+<line stroke="#000000c0" stroke-width="0.5" x1="0" x2="624" y1="28" y2="28"/><text dominant-baseline="central" fill="#b3b3b3" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="312" y="14">npx skillman</text>
+<g>
+<circle cx="14" cy="14" fill="#ff5f56" r="6" stroke="#ff5f56" stroke-width="0.5"/>
+<circle cx="34" cy="14" fill="#ffbd2e" r="6" stroke="#ffbd2e" stroke-width="0.5"/>
+<circle cx="54" cy="14" fill="#28c941" r="6" stroke="#28c941" stroke-width="0.5"/>
+</g>
+<svg class="terminal" font-family="JetBrains Mono, Fira Code, Source Code Pro, Cascadia Code, Consolas, Menlo, Monaco, DejaVu Sans Mono, monospace, Symbols Nerd Font Mono" font-size="12" height="177.6" width="624" y="28">
+<svg fill="#dcdfe4" x="24" y="24">
+<g>
+<svg height="129.6" viewBox="0 0 48 10.8" width="576">
+<g stroke-width="0.025"/>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="0">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">📦</tspan><tspan fill="#dcdfe4" x="1.8em">Installing </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills... </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="28.8">
+<text xml:space="preserve" y="0.96em"></text>
+<text textLength="0.6em" x="0em" xml:space="preserve" y="0.96em"><tspan fill="#56b6c2">◐</tspan></text>
+<text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">[1/2] </tspan><tspan fill="#dcdfe4">Installing </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(find-skills)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="43.2">
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(956ms)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="72">
+<text xml:space="preserve" y="0.96em"></text>
+<text textLength="0.6em" x="0em" xml:space="preserve" y="0.96em"><tspan fill="#56b6c2">◐</tspan></text>
+<text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">[2/2] </tspan><tspan fill="#dcdfe4">Installing </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(skill-creator)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="86.4">
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(1s)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="115.2">
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">🎉</tspan><tspan fill="#dcdfe4" x="1.8em">Done! </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills </tspan><tspan fill="#dcdfe4">installed </tspan><tspan fill="#dcdfe4">in </tspan><tspan fill="#98c379">2s</tspan><tspan fill="#dcdfe4">. </tspan></text>
+</svg>
+</g>
+</svg>
+</svg>
+<rect fill="none" height="205.6" rx="10" ry="10" stroke="#000000" stroke-width="0.5" width="624"/>
+<rect fill="none" height="203.6" rx="9" ry="9" stroke="#f0f0f080" stroke-width="0.5" width="622" x="1" y="1"/>
+</g>
+<style>
+@font-face {
+	font-family: Fira Code;
+	font-weight: 300 700;
+	font-style: normal;
+	src: url(https://raw.githubusercontent.com/pamburus/fonts/refs/heads/main/FiraCode/FiraCode-VF.woff2) format('woff2');
+}
+@font-face {
+	font-family: JetBrains Mono;
+	font-weight: 100 800;
+	font-style: normal;
+	src: url(https://raw.githubusercontent.com/pamburus/fonts/refs/heads/main/JetBrainsMono/fonts/variable/JetBrainsMono%5Bwght%5D.woff2) format('woff2');
+}
 </style>
 </svg>
