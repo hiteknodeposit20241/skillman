@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/pi0/skillman/blob/main/skills_schema.json",
+  "$id": "https://unpkg.com/skillman/skills_schema.json",
   "title": "Skills Config",
   "description": "Configuration file for skillman - manages project skills",
   "type": "object",

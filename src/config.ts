@@ -3,6 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 
 export interface SkillsConfig {
+  $schema?: string;
   skills: SkillSource[];
 }
 
@@ -117,6 +118,13 @@ export async function addSkill(
 function assertSkillsConfig(value: unknown): SkillsConfig {
   if (!value || typeof value !== "object" || !("skills" in value)) {
     throw new Error("Invalid skills.json: missing 'skills' key.");
+  }
+
+  if (!("$schema" in value)) {
+    value = {
+      $schema: "https://unpkg.com/skillman/skills_schema.json",
+      ...(value as SkillsConfig),
+    };
   }
 
   return value as SkillsConfig;

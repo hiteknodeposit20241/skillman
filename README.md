@@ -30,6 +30,7 @@ This creates a `skills.json` file:
 
 ```json
 {
+  "$schema": "https://unpkg.com/skillman/skills_schema.json",
   "skills": [
     { "source": "vercel-labs/skills", "skills": ["find-skills"] },
     { "source": "anthropics/skills", "skills": ["skill-creator"] }
