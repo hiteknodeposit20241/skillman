@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "pi0/skillman",
   "bin": {
-    "skillman": "dist/cli.js"
+    "skillman": "./dist/cli.mjs"
   },
   "files": [
     "dist",
