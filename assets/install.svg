@@ -22,7 +22,7 @@
 <g stroke-width="0.025"/>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="0">
-<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">📦</tspan><tspan fill="#dcdfe4" x="1.8em">Installing </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills... </tspan></text>
+<text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">🤹</tspan><tspan fill="#dcdfe4" x="1.8em">Installing </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills... </tspan></text>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="28.8">
 <text xml:space="preserve" y="0.96em"></text>
@@ -30,7 +30,7 @@
 <text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">[1/2] </tspan><tspan fill="#dcdfe4">Installing </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(find-skills)</tspan></text>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="43.2">
-<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(956ms)</tspan></text>
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(1s)</tspan></text>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="72">
 <text xml:space="preserve" y="0.96em"></text>
@@ -38,7 +38,7 @@
 <text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">[2/2] </tspan><tspan fill="#dcdfe4">Installing </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(skill-creator)</tspan></text>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="86.4">
-<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(1s)</tspan></text>
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(929ms)</tspan></text>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="115.2">
 <text xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4">🎉</tspan><tspan fill="#dcdfe4" x="1.8em">Done! </tspan><tspan fill="#dcdfe4">2 </tspan><tspan fill="#dcdfe4">skills </tspan><tspan fill="#dcdfe4">installed </tspan><tspan fill="#dcdfe4">in </tspan><tspan fill="#98c379">2s</tspan><tspan fill="#dcdfe4">. </tspan></text>

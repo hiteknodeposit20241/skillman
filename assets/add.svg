@@ -1,10 +1,10 @@
-<svg height="168.8" width="688" xmlns="http://www.w3.org/2000/svg">
+<svg height="255.2" width="688" xmlns="http://www.w3.org/2000/svg">
 <g transform="translate(32,16)">
-<filter filterUnits="userSpaceOnUse" height="176.8" id="shadow" width="696" x="-32" y="-24">
+<filter filterUnits="userSpaceOnUse" height="263.2" id="shadow" width="696" x="-32" y="-24">
 <feGaussianBlur stdDeviation="12"/>
 </filter>
-<rect fill="#000000c0" filter="url(#shadow)" height="104.8" rx="10" ry="10" width="624" x="4" y="12"/>
-<rect fill="#282c34" height="104.8" rx="10" ry="10" width="624"/>
+<rect fill="#000000c0" filter="url(#shadow)" height="191.2" rx="10" ry="10" width="624" x="4" y="12"/>
+<rect fill="#282c34" height="191.2" rx="10" ry="10" width="624"/>
 <clipPath id="header">
 <rect height="28" width="624"/>
 </clipPath>
@@ -15,25 +15,47 @@
 <circle cx="34" cy="14" fill="#ffbd2e" r="6" stroke="#ffbd2e" stroke-width="0.5"/>
 <circle cx="54" cy="14" fill="#28c941" r="6" stroke="#28c941" stroke-width="0.5"/>
 </g>
-<svg class="terminal" font-family="JetBrains Mono, Fira Code, Source Code Pro, Cascadia Code, Consolas, Menlo, Monaco, DejaVu Sans Mono, monospace, Symbols Nerd Font Mono" font-size="12" height="76.8" width="624" y="28">
+<svg class="terminal" font-family="JetBrains Mono, Fira Code, Source Code Pro, Cascadia Code, Consolas, Menlo, Monaco, DejaVu Sans Mono, monospace, Symbols Nerd Font Mono" font-size="12" height="163.2" width="624" y="28">
 <svg fill="#dcdfe4" x="24" y="24">
 <g>
-<svg height="28.8" viewBox="0 0 48 2.4" width="576">
+<svg height="115.2" viewBox="0 0 48 9.6" width="576">
 <g stroke-width="0.025"/>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="0">
-<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Added </tspan><tspan fill="#56b6c2">vercel-labs/skills</tspan><tspan fill="#dcdfe4" x="16.2em">to </tspan><tspan fill="#dcdfe4">skills.json </tspan><tspan fill="#dcdfe4" opacity="0.5">(find-skills)</tspan></text>
+<text xml:space="preserve" y="0.96em"></text>
+<text textLength="0.6em" x="0em" xml:space="preserve" y="0.96em"><tspan fill="#56b6c2">◐</tspan></text>
+<text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">Installing </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(find-skills)</tspan></text>
 </svg>
 <svg height="14.4" overflow="hidden" width="576" y="14.4">
-<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Added </tspan><tspan fill="#56b6c2">anthropics/skills</tspan><tspan fill="#dcdfe4" x="15.6em">to </tspan><tspan fill="#dcdfe4">skills.json </tspan><tspan fill="#dcdfe4" opacity="0.5">(skill-creator)</tspan></text>
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">vercel-labs/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(855ms)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="43.2">
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Added </tspan><tspan fill="#56b6c2">vercel-labs/skills</tspan><tspan fill="#dcdfe4" x="16.2em">to </tspan><tspan fill="#dcdfe4">skills.json </tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="57.6">
+<text xml:space="preserve" y="0.96em"></text>
+<text textLength="0.6em" x="0em" xml:space="preserve" y="0.96em"><tspan fill="#56b6c2">◐</tspan></text>
+<text x="0.6em" xml:space="preserve" y="0.96em"><tspan fill="#dcdfe4" x="1.2em">Installing </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(skill-creator)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="72">
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Installed </tspan><tspan fill="#dcdfe4">anthropics/skills </tspan><tspan fill="#dcdfe4" opacity="0.5">(947ms)</tspan></text>
+</svg>
+<svg height="14.4" overflow="hidden" width="576" y="100.8">
+<text xml:space="preserve" y="0.96em"><tspan fill="#98c379">✔</tspan><tspan fill="#dcdfe4" x="1.2em">Added </tspan><tspan fill="#56b6c2">anthropics/skills</tspan><tspan fill="#dcdfe4" x="15.6em">to </tspan><tspan fill="#dcdfe4">skills.json </tspan></text>
 </svg>
 </g>
 </svg>
 </svg>
-<rect fill="none" height="104.8" rx="10" ry="10" stroke="#000000" stroke-width="0.5" width="624"/>
-<rect fill="none" height="102.8" rx="9" ry="9" stroke="#f0f0f080" stroke-width="0.5" width="622" x="1" y="1"/>
+<rect fill="none" height="191.2" rx="10" ry="10" stroke="#000000" stroke-width="0.5" width="624"/>
+<rect fill="none" height="189.2" rx="9" ry="9" stroke="#f0f0f080" stroke-width="0.5" width="622" x="1" y="1"/>
 </g>
 <style>
+@font-face {
+	font-family: Fira Code;
+	font-weight: 300 700;
+	font-style: normal;
+	src: url(https://raw.githubusercontent.com/pamburus/fonts/refs/heads/main/FiraCode/FiraCode-VF.woff2) format('woff2');
+}
 @font-face {
 	font-family: JetBrains Mono;
 	font-weight: 100 800;
