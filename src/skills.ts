@@ -55,6 +55,8 @@ export async function installSkills(options: InstallSkillsOptions = {}): Promise
 
     if (entry.skills.length > 0) {
       args.push("--skill", ...entry.skills);
+    } else {
+      args.push("--skill", "*");
     }
 
     if (options.agents && options.agents.length > 0) {
@@ -67,6 +69,10 @@ export async function installSkills(options: InstallSkillsOptions = {}): Promise
 
     if (options.yes) {
       args.push("--yes");
+    }
+
+    if (process.env.DEBUG) {
+      console.log(`${c.dim}$ ${["skills", ...args].join(" ")}${c.reset}\n`);
     }
 
     const skillStart = performance.now();
