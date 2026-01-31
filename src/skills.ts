@@ -40,7 +40,7 @@ export async function installSkills(options: InstallSkillsOptions = {}): Promise
 
   const total = config.skills.length;
   const totalStart = performance.now();
-  console.log(`📦 Installing ${total} skill${total === 1 ? "" : "s"}...\n`);
+  console.log(`🤹 Installing ${total} skill${total === 1 ? "" : "s"}...\n`);
 
   let i = 0;
   for (const entry of config.skills) {

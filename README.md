@@ -1,11 +1,4 @@
-# skillman
-
-<!-- automd:badges color=yellow -->
-
-[![npm version](https://img.shields.io/npm/v/skillman?color=yellow)](https://npmjs.com/package/skillman)
-[![npm downloads](https://img.shields.io/npm/dm/skillman?color=yellow)](https://npm.chart.dev/skillman)
-
-<!-- /automd -->
+# 🤹 skillman
 
 Manage project Agent [skills](https://skills.sh/) from `skills.json`. Uses [`skills`](https://github.com/vercel-labs/skills) CLI under the hood.
 
@@ -40,7 +33,7 @@ npx skillman
 ```
 
 ```
-📦 Installing 2 skills...
+🤹 Installing 2 skills...
 
 ◐ [1/2] Installing vercel-labs/skills (find-skills)
 ✔ Installed vercel-labs/skills (1s)
