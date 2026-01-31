@@ -36,6 +36,9 @@ importers:
       oxlint:
         specifier: latest
         version: 1.42.0
+      skillman:
+        specifier: link:.
+        version: 'link:'
       typescript:
         specifier: ^5.9.3
         version: 5.9.3

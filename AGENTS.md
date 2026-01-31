@@ -121,7 +121,7 @@ During `install`, skillman automatically adds `.agents` to `.gitignore` (creatin
 Installation shows colored progress with timing:
 
 ```
-📦 Installing 2 skills...
+🤹 Installing 2 skills...
 
 ◐ [1/2] Installing vercel-labs/skills (pdf, commit)
 ✔ Installed vercel-labs/skills (2s)

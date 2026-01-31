@@ -36,6 +36,7 @@
     "obuild": "latest",
     "oxfmt": "latest",
     "oxlint": "latest",
+    "skillman": "link:.",
     "typescript": "^5.9.3",
     "vitest": "latest"
   },

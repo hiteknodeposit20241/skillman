@@ -4,16 +4,25 @@ Manage project Agent [skills](https://skills.sh/) from `skills.json`. Uses [`ski
 
 ## Usage
 
-Add skills to your project:
+**Install all skills from `skills.json`:**
+
+```sh
+npx skillman
+```
+
+<p align="center">
+  <img src="./assets/install.svg" alt="Install preview">
+</p>
+
+**Add new skills to project:**
 
 ```sh
 npx skillman add vercel-labs/skills:find-skills anthropics/skills:skill-creator
 ```
 
-```sh
-✔ Added vercel-labs/skills to skills.json (find-skills)
-✔ Added anthropics/skills to skills.json (skill-creator)
-```
+<p align="center">
+  <img src="./assets/add.svg" alt="Install preview">
+</p>
 
 This creates a `skills.json` file:
 
@@ -24,24 +33,6 @@ This creates a `skills.json` file:
     { "source": "anthropics/skills", "skills": ["skill-creator"] }
   ]
 }
-```
-
-User can later install all skills from `skills.json`:
-
-```sh
-npx skillman
-```
-
-```
-🤹 Installing 2 skills...
-
-◐ [1/2] Installing vercel-labs/skills (find-skills)
-✔ Installed vercel-labs/skills (1s)
-
-◐ [2/2] Installing anthropics/skills (skill-creator)
-✔ Installed anthropics/skills (1s)
-
-🎉 Done! 2 skills installed in 2s.
 ```
 
 ## Development

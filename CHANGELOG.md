@@ -5,7 +5,7 @@
 
 [compare changes](https://github.com/pi0/skillman/compare/v0.0.1...v0.0.2)
 
-### 📦 Build
+### 🤹 Build
 
 - Fix bin path ([4dfd7dd](https://github.com/pi0/skillman/commit/4dfd7dd))
 
