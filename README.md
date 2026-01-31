@@ -67,6 +67,11 @@ npx skillman
 
 </details>
 
+## Alternatives
+
+- Proposal PR for adding `skill-lock.json` ([vercel-labs/skills#234](https://github.com/vercel-labs/skills/pull/234))
+- [hairyf/skills-manifest](https://github.com/hairyf/skills-manifest)
+
 ## License
 
 Published under the [MIT](https://github.com/unjs/skillman/blob/main/LICENSE) license 💛.
