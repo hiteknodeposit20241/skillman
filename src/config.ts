@@ -100,17 +100,25 @@ export async function addSkill(
 ): Promise<SkillsConfigResult> {
   return updateSkillsConfig((config) => {
     const entry = config.skills.find((item) => item.source === source);
+
     if (!entry) {
       config.skills.push({ source, skills: [...skills] });
       return config;
     }
 
-    const existing = new Set(entry.skills);
-    for (const skill of skills) {
-      existing.add(skill);
+    // Empty skills means "all skills" - if either side is empty, result is all
+    if (skills.length === 0 || !entry.skills?.length) {
+      entry.skills = [];
+      return config;
     }
 
-    entry.skills = Array.from(existing);
+    // Merge specific skills
+    const merged = new Set(entry.skills);
+    for (const skill of skills) {
+      merged.add(skill);
+    }
+    entry.skills = [...merged];
+
     return config;
   }, options);
 }

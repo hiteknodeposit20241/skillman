@@ -71,15 +71,32 @@ ${c.dim}$${c.reset} npx ${name} add ${c.cyan}vercel-labs/skills${c.reset}
       showUsage("add");
       throw new Error("Missing skill source.");
     }
-    const agents = values.agent || ["claude-code"];
+
+    // Parse and deduplicate sources
+    const parsedSources: { source: string; skills: string[] }[] = [];
     for (const rawSource of sources) {
-      const { source, skills: parsedSkills } = parseSource(rawSource);
-      const skills = [...parsedSkills, ...(values.skill ?? [])];
+      const { source, skills } = parseSource(rawSource);
+      const existing = parsedSources.find((p) => p.source === source);
+      if (existing) {
+        // Merge skills (empty = all, so if either is empty, result is empty)
+        if (skills.length === 0 || existing.skills.length === 0) {
+          existing.skills = [];
+        } else {
+          existing.skills = [...new Set([...existing.skills, ...skills])];
+        }
+      } else {
+        parsedSources.push({ source, skills: [...skills] });
+      }
+    }
 
-      // Install the skill first
+    const agents = values.agent || ["claude-code"];
+    const globalSkills = values.skill ?? [];
+
+    for (const { source, skills: parsedSkills } of parsedSources) {
+      const skills =
+        parsedSkills.length === 0 ? [] : [...new Set([...parsedSkills, ...globalSkills])];
+
       await installSkillSource({ source, skills }, { agents, yes: true });
-
-      // Then add to skills.json
       await addSkill(source, skills);
       console.log(`${c.green}✔${c.reset} Added ${c.cyan}${source}${c.reset} to skills.json`);
     }
