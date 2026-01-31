@@ -17,9 +17,10 @@ npx skillman
 **Add new skills to project:**
 
 ```bash
-npx skillman add \
-  vercel-labs/skills:find-skills \
-  anthropics/skills:skill-creator
+npx skillman skills.sh/vercel-labs/skills/find-skills
+
+npx skillman add anthropics/skills:skill-creator
+
 ```
 
 <p align="center">

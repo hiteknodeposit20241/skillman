@@ -9,7 +9,18 @@ import { installSkillSource, installSkills } from "./skills.ts";
 const name = "skillman";
 const version = "0.0.0";
 
-function parseSource(input: string): { source: string; skills: string[] } {
+export function parseSource(input: string): { source: string; skills: string[] } {
+  // Handle skills.sh URLs: https://skills.sh/owner/repo/skill-name or skills.sh/owner/repo/skill-name
+  const skillsShMatch = input.match(/^(?:https?:\/\/)?skills\.sh\/(.+)/)?.[1];
+  if (skillsShMatch) {
+    const [namespace, repo, ...skills] = skillsShMatch.split("/");
+    if (!namespace || !repo) {
+      return { source: input, skills: [] };
+    }
+    const filtered = skills.map((s) => s.trim()).filter((s) => s.length > 0);
+    return { source: `${namespace}/${repo}`, skills: filtered.includes("*") ? [] : filtered };
+  }
+
   const [source = "", ...skills] = input.split(":");
   const filtered = skills.map((skill) => skill.trim()).filter((skill) => skill.length > 0);
   return { source, skills: filtered.includes("*") ? [] : filtered };
@@ -96,6 +107,7 @@ ${c.bold}Examples:${c.reset}
   ${c.dim}$${c.reset} ${name} add vercel-labs/skills:pdf:commit
   ${c.dim}$${c.reset} ${name} add vercel-labs/skills --skill pdf --skill commit
   ${c.dim}$${c.reset} ${name} add vercel-labs/skills:find-skills anthropics/skills:skill-creator
+  ${c.dim}$${c.reset} ${name} add https://skills.sh/vercel-labs/skills/pdf
 `);
     return;
   }
