@@ -1,6 +1,35 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/pi0/skillman/compare/v0.0.2...v0.0.3)
+
+### 🚀 Enhancements
+
+- **cli:** Auto install after add ([d4ad39f](https://github.com/pi0/skillman/commit/d4ad39f))
+
+### 🩹 Fixes
+
+- **cli:** Add all skills if empty array ([e628e31](https://github.com/pi0/skillman/commit/e628e31))
+- Install all skills when non specified ([c6c0e2e](https://github.com/pi0/skillman/commit/c6c0e2e))
+
+### 💅 Refactors
+
+- Update emoji to 🤹 ([5409a66](https://github.com/pi0/skillman/commit/5409a66))
+
+### 🏡 Chore
+
+- Add alternatives section ([4ace0c1](https://github.com/pi0/skillman/commit/4ace0c1))
+- Update readme ([72b6fa4](https://github.com/pi0/skillman/commit/72b6fa4))
+- Ignore skills.json from linting ([1a29757](https://github.com/pi0/skillman/commit/1a29757))
+- Update readme ([4fba716](https://github.com/pi0/skillman/commit/4fba716))
+- Update assets ([f6e410b](https://github.com/pi0/skillman/commit/f6e410b))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+
 ## v0.0.2
 
 [compare changes](https://github.com/pi0/skillman/compare/v0.0.1...v0.0.2)
